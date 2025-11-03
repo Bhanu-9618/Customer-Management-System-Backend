@@ -1,5 +1,6 @@
 package edu.icet.controller;
 
+import edu.icet.model.dto.Customer;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -17,4 +18,19 @@ public class CustomerController {
     public Integer getAge(){
         return 18;
     }
+
+    @GetMapping("/get-customer")
+    public Customer getCustomer(){
+        return new Customer(
+                "1",
+                "saman",
+                "walana",
+                75000.00
+        );
+    }
 }
+
+
+
+
+//http://localhost:8080/swagger-ui/index.html
