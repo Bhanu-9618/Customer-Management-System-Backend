@@ -42,6 +42,11 @@ public class CustomerController {
         return customerService.getAll();
     }
 
+    @PostMapping
+    public void addCustomer(@RequestBody Customer customer){
+        customerService.addCustomer(customer);
+    }
+
 }
 
 
