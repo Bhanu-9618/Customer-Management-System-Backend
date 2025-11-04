@@ -52,6 +52,10 @@ public class CustomerController {
         return customerService.findById(id);
     }
 
+    @GetMapping("/find-by-name/{name}")
+    public List<Customer> findByName(@PathVariable String name){
+        return customerService.findByName(name);
+    }
 
 
 }
