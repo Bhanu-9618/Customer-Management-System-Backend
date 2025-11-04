@@ -47,6 +47,13 @@ public class CustomerController {
         customerService.addCustomer(customer);
     }
 
+    @GetMapping("/find-by-id/{id}")
+    public Customer findByID(@PathVariable String id){
+        return customerService.findById(id);
+    }
+
+
+
 }
 
 
